@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dirty 30 for Haley</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--bg-dark:#0A1720;
+--bg-accent:#213C46;
+--accent:#6FA8B6;
+--glow:#9ED2DD;
+--card-bg:rgba(9,25,31,.95);
+--text-main:#F6FDFF;
+--text-muted:#CBDDE3;
+--border:rgba(255,255,255,.15);
+}
+
+body{
+margin:0;
+background:radial-gradient(circle,var(--bg-accent),var(--bg-dark));
+font-family:Poppins,sans-serif;
+color:var(--text-main);
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:18px;
+}
+
+.orb{
+position:fixed;
+width:300px;
+height:300px;
+border-radius:50%;
+filter:blur(50px);
+opacity:.45;
+z-index:-1;
+animation:float 16s ease-in-out infinite alternate;
+}
+
+.orb.one{background:var(--accent);top:-80px;left:-80px}
+.orb.two{background:var(--glow);bottom:-120px;right:-120px}
+
+@keyframes float{
+to{transform:translate(40px,-40px)}
+}
+
+.card{
+max-width:720px;
+width:100%;
+background:var(--card-bg);
+border-radius:24px;
+border:1px solid var(--border);
+box-shadow:0 25px 80px rgba(0,0,0,.7);
+padding:28px;
+}
+
+.pill{
+display:inline-block;
+padding:6px 14px;
+border-radius:999px;
+border:1px solid var(--border);
+font-size:12px;
+color:var(--text-muted);
+margin-bottom:14px;
+background:#0005;
+}
+
+h1{
+font-size:2.8rem;
+margin:8px 0;
+background:linear-gradient(120deg,var(--accent),var(--glow));
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.subtitle{
+color:var(--text-muted);
+line-height:1.6;
+font-size:.95rem;
+}
+
+.tags span{
+display:inline-block;
+padding:4px 10px;
+border-radius:999px;
+border:1px solid var(--border);
+font-size:.75rem;
+color:var(--text-muted);
+margin:6px 6px 0 0;
+}
+
+.buttons{
+margin-top:16px;
+}
+
+.buttons button{
+padding:10px 18px;
+border-radius:999px;
+border:none;
+cursor:pointer;
+font-size:.9rem;
+font-weight:600;
+background:linear-gradient(135deg,var(--accent),var(--glow));
+color:#07161e;
+box-shadow:0 15px 40px rgba(0,0,0,.6);
+}
+
+.badges span{
+display:inline-block;
+padding:6px 10px;
+border-radius:999px;
+border:1px solid var(--border);
+background:#0004;
+font-size:.75rem;
+color:var(--text-muted);
+margin:6px 6px 0 0;
+}
+
+.reasons{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:12px;
+margin-top:18px;
+}
+
+.reason{
+padding:10px 12px;
+border-radius:16px;
+background:#0004;
+border:1px solid var(--border);
+}
+
+.reason h3{
+font-size:.95rem;
+margin:4px 0;
+}
+
+.reason p{
+font-size:.82rem;
+color:var(--text-muted);
+line-height:1.45;
+}
+
+footer{
+margin-top:16px;
+font-size:.8rem;
+color:var(--text-muted);
+}
+
+/* INTRO SCREEN */
+#introScreen{
+position:fixed;
+inset:0;
+display:flex;
+align-items:center;
+justify-content:center;
+background:radial-gradient(circle,var(--bg-accent),var(--bg-dark));
+z-index:99;
+}
+
+#startBtn{
+padding:16px 28px;
+border-radius:999px;
+border:none;
+background:linear-gradient(135deg,var(--accent),var(--glow));
+color:#07161e;
+font-size:1.05rem;
+font-weight:700;
+letter-spacing:.05em;
+cursor:pointer;
+box-shadow:0 25px 70px rgba(0,0,0,.7);
+}
+
+/* MODAL LETTER */
+.overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.78);
+display:flex;
+align-items:center;
+justify-content:center;
+padding:20px;
+z-index:20;
+}
+
+.hidden{display:none;}
+
+.modal{
+max-width:520px;
+background:#07161e;
+border-radius:22px;
+border:1px solid var(--border);
+padding:22px;
+}
+
+.modal p{
+line-height:1.6;
+color:var(--text-muted);
+font-size:.9rem;
+}
+
+.modal button{
+margin-top:10px;
+padding:8px 16px;
+border:none;
+border-radius:999px;
+cursor:pointer;
+font-weight:600;
+background:linear-gradient(135deg,var(--accent),var(--glow));
+color:#07161e;
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO SCREEN -->
+<div id="introScreen">
+<button id="startBtn">
+✨ Press to Begin Haley’s Birthday Experience
+</button>
+</div>
+
+<div class="orb one"></div>
+<div class="orb two"></div>
+
+<div class="card">
+
+<div class="pill">🌸 Dirty 30 • Court Goddess 🏐</div>
+
+<h1>Happy 30th, Haley 💚</h1>
+
+<p class="subtitle">
+This little page mixes flowers, volleyball vibes, and the fact that you’re
+basically a <strong>redhead Amazon goddess / celebrity crush</strong> —
+all wrapped in the color of your eyes.
+</p>
+
+<div class="tags">
+<span>🌺 Flower Energy</span>
+<span>🏐 Volleyball Queen</span>
+<span>🧠 Ridiculously Smart</span>
+</div>
+
+<div class="buttons">
+<button onclick="openLetter()">Read Birthday Letter 💌</button>
+</div>
+
+<div class="badges">
+<span>🏐 Always up for another set</span>
+<span>💚 Main character energy</span>
+<span>⚡ Goddess vibes</span>
+</div>
+
+<div class="reasons">
+
+<div class="reason">
+<h3>01 • Mind</h3>
+<p>Every conversation with you hits different — you’re crazy smart.</p>
+</div>
+
+<div class="reason">
+<h3>02 • Heart</h3>
+<p>You care hard and always show up for your people.</p>
+</div>
+
+<div class="reason">
+<h3>03 • Energy</h3>
+<p>You’re unforgettable in the best way.</p>
+</div>
+
+</div>
+
+<footer>
+Built just for your Dirty 30 💚 — from someone who thinks you’re truly special.
+</footer>
+
+</div>
+
+<!-- LETTER MODAL -->
+<div id="overlay" class="overlay hidden">
+<div class="modal">
+
+<p>Happy 30th birthday, Haley 🥹</p>
+
+<p>
+I hope today is the best day — you're <strong>30 years young</strong>,
+keep living it up :)
+</p>
+
+<p>
+You're impressive in every space you step into — whether on the volleyball
+court or just showing up as yourself. That presence and calm strength you
+carry is something special.
+</p>
+
+<p>
+Also yeah — redhead Amazon goddess celebrity crush energy remains very real 😂
+</p>
+
+<p>
+Thanks for being you. I’m really glad I know you.
+</p>
+
+<button onclick="closeLetter()">Close 💜</button>
+</div>
+</div>
+
+<script>
+const overlay = document.getElementById("overlay");
+const intro = document.getElementById("introScreen");
+const startBtn = document.getElementById("startBtn");
+
+function openLetter(){
+ overlay.classList.remove("hidden");
+}
+
+function closeLetter(){
+ overlay.classList.add("hidden");
+}
+
+startBtn.addEventListener("click", () => {
+ intro.style.transition = "opacity .6s ease";
+ intro.style.opacity = "0";
+
+ setTimeout(()=>{
+   intro.style.display="none";
+ },600);
+});
+</script>
+
+</body>
+</html>
